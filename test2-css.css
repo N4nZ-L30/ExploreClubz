@@ -1,13 +1,17 @@
+
 /* Basic CSS for styling */
 html ,body{
   scroll-padding-top: 80px;
   height: 100%; /* Ensure the body takes full height */
   margin: 0; /* Remove default margin */
-  overflow: auto; /* Allow scrolling */
+  overflow: auto;
+  font-family: 'Rajdhani',sans-serif; 
 }  
+
+
 body {
   margin: 0;
-  background-color: #141414;
+  background-color: black;
   color: #fff;
   }
 
@@ -113,10 +117,12 @@ body {
   }
 
   .edit-details-button {
+      background: transparent;
+      color:silver;
       margin-top: 15px;
+      font-size: 20px;
       padding: 10px;
-      background-color: silver;
-      border: none;
+      border: 2px solid silver;
       border-radius: 6px;
       cursor: pointer;
       transition: 0.3s;
@@ -124,11 +130,38 @@ body {
       top: 10px;
       right: 20px;
       z-index: 101;
+      transition: all 0.3s ease;
     }
 
   .edit-details-button:hover {
-    box-shadow: 0 0 10px silver;
-  }
+    background: silver;
+    color: black;
+    box-shadow: 0 0 12px silver;
+}
+
+.logout-button {
+      background: transparent;
+      color:silver;
+      margin-top: 15px;
+      font-size: 20px;
+      padding: 10px;
+      border: 2px solid silver;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      position: absolute;
+      top: 10px;
+      right: 150px;
+      z-index: 101;
+      transition: all 0.3s ease;
+    }
+.logout-button:hover {
+    background: silver;
+    color: black;
+    box-shadow: 0 0 12px silver;
+}
+
+
   /* Carousel */
   .carousel {
   width: 100%;
@@ -303,7 +336,14 @@ body {
   height: auto; /* Maintain aspect ratio */
   margin: 5px; /* Space between images */
   opacity: 0; /* Start with opacity 0 for fade-in */
-  transition: opacity 1 transform 0.3s ease; /* Transition for fade-in */
+  transition: opacity 1s transform 0.3s ease; /* Transition for fade-in */
+}
+
+#clubAchievements img {
+  width: 220px;
+  height: auto;
+  margin: 10px;
+  border-radius: 8px;
 }
 
 /*express interest button*/
@@ -425,6 +465,7 @@ body {
 
   /* Header text */
   .typing-header {
+    padding: top 60px;
     font-size: 1.5em;
     width: 100%;
     text-align: center;
@@ -451,6 +492,13 @@ body {
     position: static;
     margin: 10px auto;
     display: block;
+    width:fit-content;
+  }
+  .logout-button {
+    position: static;
+    margin: 10px auto;
+    display: block;
+    width:fit-content;
   }
 
   /* Carousel stacks vertically */
