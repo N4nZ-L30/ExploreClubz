@@ -1,0 +1,544 @@
+/* Basic CSS for styling */
+html ,body{
+  scroll-padding-top: 80px;
+  height: 100%; /* Ensure the body takes full height */
+  margin: 0; /* Remove default margin */
+  overflow: auto; /* Allow scrolling */
+}  
+body {
+  margin: 0;
+  background-color: #141414;
+  color: #fff;
+  }
+
+  header.page-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 0;
+      background-color: #111;
+      position: relative;
+    }
+
+    .typing-header {
+      text-align: center;
+      font-size: 2.5em;
+      font-family: 'Rajdhani', sans-serif;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid;
+      width: 28ch;
+      animation: typing 3s steps(25), blink 0.5s step-end infinite alternate;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 25ch; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+
+
+  /* Navigation Bar */
+  nav {
+  background-color: #222;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  }
+ 
+  nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+ 
+  nav li {
+  margin: 0 30px;
+  }
+ 
+  nav a {
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 300;
+    margin-left: 35px;
+    animation: slideTop .5s ease forwards;
+    z-index: 10;
+  }
+
+  @keyframes slideTop {
+  0% {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }    
+}
+
+  a:any-link {
+    cursor: pointer;
+  }
+   nav a:hover {
+      color:silver;
+    }
+
+    nav a:hover::after {
+    width: 100%;
+  }
+
+    nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+    width: 0;
+    height: 2px; 
+    background-color: silver;
+    transition: width 0.5s ease-in-out;
+  }
+
+  .edit-details-button {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: silver;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      z-index: 101;
+    }
+
+  .edit-details-button:hover {
+    box-shadow: 0 0 10px silver;
+  }
+  /* Carousel */
+  .carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  }
+ 
+  .carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  }
+ 
+     .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex; /* Use flexbox for side-by-side layout */
+    align-items: center; /* Vertically center content */
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+   }
+
+   .carousel-item img {
+    width: 60%; /* Image takes up 60% of the width */
+    height: 300px; /* Fixed height for the image */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    margin-right: 20px; /* Add some spacing between image and text */
+
+   }
+   /*info on clubs*/
+   .club-info {
+    width: 40%; /* Club info takes up 40% of the width */
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+   }
+
+   .club-info h3 {
+    margin-top: 0; /* Remove default margin from h3 */
+   }
+   
+
+  /* Club List */
+  .club-list-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px;
+  position: relative;
+  }
+ 
+  .club-item {
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add transition for smooth effect */
+  }
+
+  .club-item:hover{
+  transform: translateY(-5px); /* Move the card up slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a shadow on hover */
+  }
+ 
+  .club-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  }
+ 
+  /* Club Details Overlay */
+  .club-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(72, 69, 69, 0.401); /* Semi-transparent background */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other content */
+  animation: fadeIn 0.5s ease-in-out;
+  }
+ @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  .club-details {
+  background-color: rgba(30, 30, 30, 0.641); /* changed from light white */
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px; /* Increased width for larger overlay */
+  max-height: 90%; /* Limit height to fit within the viewport */
+  overflow-y: auto; /* Enable vertical scrolling */
+  position: relative;
+  display:flex;
+  flex-direction: row;
+  gap: 20px;
+  color: white;
+  }
+.club-details img {
+      width: 40%;
+      max-width: 400px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .club-description {
+      width: 60%;
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    .club-description:hover {
+      transform: scale(1.02);
+      filter: brightness(1.2);
+    }
+.club-details-content {
+    color: #ddd;
+    }
+  .club-details-content p {
+    color: #ddd;
+    font-size: 15px;
+    font-weight: 200;
+    }
+
+  .club-details-content:hover {
+  backdrop-filter: blur(10px); /* Blur effect on hover */
+}
+.club-details-content a {
+  font-size: 20px;
+  display: block;
+  margin-top: 10px;
+  color: silver; /* Link color */
+}
+/*Club Acheivement if there*/
+.club-details-content #clubAchievements {
+  margin-top: 20px; /* Space for achievements */
+}
+.club-details-content img {
+  width: 100px; /* Set a fixed width for achievement images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 5px; /* Space between images */
+}
+
+  .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px; /* Size of the 'X' */
+  color: white; /* Default color */
+  background-color: transparent; /* No background initially */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 10px; /* Padding around the button */
+  border-radius: 50%; /* Make it circular */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+
+  .close-button:hover {
+  background-color: black; /* Black background on hover */
+  color: white; /* White 'X' on hover */
+}
+
+
+ /*Acheivements image*/
+.achievement-img {
+  width: 100px; /* Set a fixed width for achievement images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 5px; /* Space between images */
+  opacity: 0; /* Start with opacity 0 for fade-in */
+  transition: opacity 1 transform 0.3s ease; /* Transition for fade-in */
+}
+
+/*express interest button*/
+.express-btn {
+  max-width: 20rem;
+  width: 100%;
+  height: 4rem;
+  background-color: #0ebac5;
+  padding: 0,8em 2em;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-family: 'Rajdhani', sans-serif;
+  overflow: hidden;
+  margin-top: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+.express-btn .text {
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  user-select: none;
+  position: absolute;
+  z-index: 2;
+  top: 0.8rem;
+  left: 0.1em;
+}
+
+.express-btn .line {
+  display: inline-block;
+  width: 6px;
+  border-bottom: 2px solid #fff;
+  height: 0.1px;
+  position: absolute;
+  z-index: 2;
+  top: 0.7rem;
+  right: 1em;
+  transition: 0.5s;
+}
+
+.express-btn::before,
+.express-btn::after {
+  content: "";
+  width: 0;
+  height: 50%;
+  background-color: #1e183a;
+  position: absolute;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.express-btn::before {
+  top: 0;
+  right: 0;
+}
+
+.express-btn::after {
+  bottom: 0;
+  left: 0;
+}
+
+.express-btn:hover::before,
+.express-btn:hover::after {
+  opacity: 1;
+  width: 100%;
+}
+
+.express-btn:hover .line {
+  width: 100px;
+}
+
+ 
+
+  /* Arrows */
+  .carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  }
+ 
+  .nav {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  padding: 10px;
+  }
+ 
+  .nav.left {
+  left: 0;
+  }
+ 
+  .nav.right {
+  right: 0;
+  }
+ 
+  /* Section Styling */
+  section {
+  padding: 20px;
+  }
+ 
+  h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  }
+
+
+  /*  Responsive */
+@media screen and (max-width: 768px) {
+
+  /* Header text */
+  .typing-header {
+    font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+    border-right: none;
+    white-space: normal;
+  }
+
+  /* Navbar becomes vertical */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  nav a {
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+  .edit-details-button {
+    position: static;
+    margin: 10px auto;
+    display: block;
+  }
+
+  /* Carousel stacks vertically */
+  .carousel-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .club-info {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Club Cards */
+  .club-list-container {
+    padding: 10px;
+  }
+
+  .club-item {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .club-item img {
+    height: 180px;
+  }
+
+  /* Overlay Box */
+  .club-details {
+    flex-direction: column;
+    width: 95%;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .club-details img {
+    width: 100%;
+    max-width: none;
+  }
+
+  .club-description {
+    width: 100%;
+  }
+
+  .club-details-content h3 {
+    font-size: 1.2em;
+  }
+
+  .club-details-content p {
+    font-size: 0.95em;
+  }
+
+  /* Express Interest button */
+  .express-btn {
+    max-width: 90%;
+    height: 3.5rem;
+    padding: 0.6em 1.5em;
+    font-size: 16px;
+  }
+
+  .express-btn .text {
+    font-size: 16px;
+    top: 0.7rem;
+    left: 0.2em;
+  }
+
+  .express-btn .line {
+    top: 0.7rem;
+    right: 0.8em;
+  }
+
+  /* Arrows hidden on small screens (optional) */
+  .nav {
+    display: none;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+}
