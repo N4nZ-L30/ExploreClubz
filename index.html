@@ -4,9 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coding Clubs</title>
+  <link href="theme_background.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="theme_background.css">
-  <link rel="stylesheet" href="test2-css.css">
+  <link href="test2-css.css" rel="stylesheet">
+  <style>
+  @media screen and (max-width: 768px) {
+    .shooting-star {
+    display: none !important;
+  }
+
+  .stars {
+    animation: none ; /* Optional: Stop twinkling too */
+  }
+
+  .stars::after {
+    animation: none ;
+  }
+}
+
+  </style>
  </head>
  <body>
   <div class="stars"></div>
@@ -23,6 +39,7 @@
     <div class="typing-header">
       Find Your Vibe. Join the Tribe...</div>
     <button class="edit-details-button" onclick="window.open('editprof.html', '_blank')">Edit Profile</button>
+    <button class="logout-button" onclick="window.open('logout.html','_blank')">Logout</button>
   </header>
   
   
@@ -35,8 +52,7 @@
   <li><a href="#engineering-clubs">Engineering Clubs</a></li>
   <li><a href="#other-clubs">Other Clubs</a></li>
   </ul>
-  </nav>
-  </header>
+</nav>
  
   <!-- Top Clubs Carousel -->
   <section class="carousel" id="home">
@@ -87,13 +103,12 @@
       <img src="clubpics/bios.jpeg" alt="bi0s">
       <div class="club-details" style="display: none;">
         <h3>BI0S CTF</h3>
-        <p><strong>Club ID:</strong>CS001</p>
+        <p>Club ID: CS001</p>
         <p>bi0s CTF Club is the go-to spot for students passionate about hacking, cryptography, and problem-solving. We dive into Capture The Flag (CTF) challenges, sharpen our skills with real-world scenarios, and compete in national and global cybersecurity contests. Join us to level up your hacking game, collaborate with like-minded enthusiasts, and protect the digital world—one flag at a time.</p>
         <a href="https://bi0s.in/" target="_blank" >Visit Club Website</a>
         <div class="achievements">
           <h4>Our Achievements</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
+          <img src="acheive/b1.jpg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -106,8 +121,7 @@
         <a href="https://acm-amritapuri.vercel.app/" target="_blank">Visit Club Website</a>
         <div class="achievements">
           <h4>Our Achievements</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
+          <img src="acheive/ac1.jpg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -120,8 +134,7 @@
         <a href="https://amfoss.in/" target="_blank">Visit Club Website</a>
         <div class="achievements">
           <h4>Our Achievements</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
+          <img src="acheive/af.jpg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -134,7 +147,7 @@
         <a href="https://www.amrita.edu/icpc21/" target="_blank">Visit Club Website</a>
         <div class="achievements">
           <h4>Our Achievements</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
+          <img src="acheive/ic1.jpeg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -147,8 +160,7 @@
         <a href="https://pentest.bi0s.in/" target="_blank">Visit Club Website</a>
         <div class="achievements">
           <h4>Our Achievements</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
+          <img src="acheive/pe1.jpg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -160,8 +172,7 @@
         <p>SYN Club is a hub for AI enthusiasts eager to explore machine learning, neural networks, and cutting-edge technologies. We dive into projects, workshops, and research that push the boundaries of artificial intelligence. Whether you're coding your first model or building advanced AI systems, join us to innovate, collaborate, and shape the future with intelligent tech.</p>
         <div class="achievements">
           <h4>Our Achievements</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
+          <img src="acheive/syn1.jpeg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -193,8 +204,7 @@
         <p>Checkmate is where sharp minds meet the 64 squares. Whether you're a beginner or a seasoned player, our club offers tournaments, strategy sessions, and casual games to sharpen your skills. Join us to learn, compete, and master the art of chess—one move at a time.</p>
         <div class="achievements">
           <h4>Gallery</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
+          <img src="acheive/ch1.jpg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -206,8 +216,7 @@
         <p>GameOn is the ultimate destination for athletes and sports enthusiasts. From the court to the field, we bring together basketball, football, volleyball, and badminton under one roof. Whether you're in it to compete or just to play for fun, GameOn promotes teamwork, fitness, and a winning mindset. Train, compete, and grow—because every game starts with a spark.</p>
         <div class="achievements">
           <h4>Our Achievements</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
+          <img src="acheive/spo1.jpeg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -219,8 +228,7 @@
         <p>Raider’s Den is the home of kabaddi warriors. Built on grit, agility, and teamwork, our club trains and competes in one of India's most thrilling and raw sports. From friendly matches to intense tournaments, tackle every challenge head-on. If you’ve got the spirit to raid and the strength to hold, this is your arena.</p>
         <div class="achievements">
           <h4>Our Achievements</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
+          <img src="acheive/kab1.jpeg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -231,8 +239,8 @@
         <p><strong>Club ID:</strong> SP004</p>
         <p>NEXTLEVEL Gaming Club is the ultimate hangout for gamers of all kinds. From esports tournaments to casual game nights, we cover everything—FPS, MOBA, strategy, and more. Join us to compete, collaborate, and level up your skills in a community that lives and breathes gaming.</p>
         <div class="achievements">
-          <h4>Our Achievements</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
+          <h4>Gallery</h4>
+          <img src="acheive/gam1.jpeg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -254,6 +262,8 @@
         <p>Club ID: EN001</p>
         <p>GearHeads Mech Club is the ultimate playground for mechanical engineering enthusiasts. From robotics to automotive innovations, we build, design, and innovate with hands-on projects and workshops. Join us to sharpen your skills, collaborate with like-minded creators, and engineer solutions that move the world.</p>
         <div class="achievements">
+          <h4>Gallery</h4>
+          <img src="acheive/me1.jpg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -264,6 +274,8 @@
         <p>Club ID: EN002</p>
         <p>RoboCore is where innovation meets automation. We explore robotics, AI, and automation technologies through hands-on projects, competitions, and workshops. Whether you’re into programming, designing, or building, RoboCore empowers you to create intelligent machines and automated solutions that shape the future.</p>
         <div class="achievements">
+          <h4>Gallery</h4>
+          <img src="acheive/r1.jpg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -296,9 +308,6 @@
         <p>amESE Club is dedicated to promoting environmental awareness and social responsibility at Amritapuri. We organize activities like clean-up drives, tree planting, sustainability workshops, and community outreach programs. Join us to make a positive impact, learn about eco-friendly practices, and contribute to a greener, healthier campus and world.</p>
         <a href="https://in.linkedin.com/company/amese-club" target="_blank">Visit Club Linkedin</a>
         <div class="achievements">
-          <h4>Our Achievements</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
         </div>
       </div>
     </div>
@@ -310,9 +319,8 @@
         <p>AYUDH Amritapuri is a youth movement focused on self-development, community service, and spiritual growth. Through workshops, volunteer activities, and cultural events, we inspire students to lead with compassion, integrity, and purpose. Join AYUDH to grow personally and contribute meaningfully to society.</p>
         <a href="https://www.amritapuri.org/activity/cultural/ayudh" target="_blank">Visit Club Website</a>
         <div class="achievements">
-          <h4>Our Achievements</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
+          <h4>Gallery</h4>
+          <img src="acheive/ay1.jpeg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -324,9 +332,6 @@
         <p>Media Amritapuri is the official hub for all things visual on campus. We cover events, produce videos, take stunning photos, and create content that brings campus life to screens near and far. Join us to sharpen your skills in photography, videography, and storytelling.</p>
         <a href="https://www.instagram.com/b_rollers.amritapuri/?hl=en" target="_blank">Visit Club Linkedin</a>
         <div class="achievements">
-          <h4>Our Achievements</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
         </div>
       </div>
     </div>
@@ -337,9 +342,6 @@
         <p><strong>Club ID:</strong> AM001</p>
         <p>AMPS (Amritapuri Movie & Photography Society) Movie Club is the go-to place for film lovers and creators on campus. From movie screenings and discussions to filmmaking workshops and short film projects, we bring cinema enthusiasts together to explore the art of storytelling through film. Join us to watch, create, and celebrate movies that inspire and entertain.</p>
         <div class="achievements">
-          <h4>Gallery</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
         </div>
       </div>
     </div>
@@ -350,9 +352,6 @@
         <p><strong>Club ID:</strong> AM002</p>
         <p>Shinobi Summit Anime Club is the ultimate gathering for anime lovers at Amritapuri. Dive into screenings, manga discussions, cosplay events, and Japanese culture workshops. Whether you’re a casual viewer or a hardcore fan, join us to celebrate the art, stories, and spirit of anime with fellow enthusiasts.</p>
         <div class="achievements">
-          <h4>Gallery</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
         </div>
       </div>
     </div>
@@ -364,8 +363,7 @@
         <p>Amritapuri Toastmasters is a supportive community dedicated to developing communication and leadership skills. Through regular meetings, speeches, and constructive feedback, members build confidence, sharpen public speaking abilities, and grow as leaders. Join us to find your voice and inspire others.</p>
         <div class="achievements">
           <h4>Gallery</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
+          <img src="acheive/toa1.jpg" alt="Achievement 1" class="achievement-img">
         </div>
       </div>
     </div>
@@ -376,9 +374,6 @@
         <p><strong>Club ID:</strong> AR001</p>
         <p>Dance Club is the heartbeat of movement and expression on campus. From contemporary to hip-hop, classical to freestyle, we celebrate every style and every step. Whether you're a seasoned performer or just discovering your groove, join us to learn, perform, and connect through the power of dance. Participate in workshops, performances, and friendly battles that turn passion into performance.</p>
         <div class="achievements">
-          <h4>Gallery</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
         </div>
       </div>
     </div>
@@ -390,9 +385,6 @@
         <p><strong>Club ID:</strong> AR002</p>
         <p>Music Club is the heartbeat of musical creativity on campus. Whether you're a vocalist, instrumentalist, composer, or just love to jam, this is where talent meets opportunity. We host jam sessions, live performances, collaborations, and workshops across genres—from classical to rock, indie to EDM. If music moves you, Music Club is your stage.</p>
         <div class="achievements">
-          <h4>Gallery</h4>
-          <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-          <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
         </div>
       </div>
     </div>
@@ -404,9 +396,6 @@
     <p><strong>Club ID:</strong> AR003</p>
     <p>Art Club is a creative space for artists and designers to explore visual arts, crafts, and exhibitions. We encourage experimentation with mediums, from painting and sketching to digital design and sculpture. Join us to express your creativity, collaborate on projects, and showcase your work in campus galleries and events. Inspire and be inspired through the universal language of art.</p>
     <div class="achievements">
-      <h4>Gallery</h4>
-      <img src="achievement1.png" alt="Achievement 1" class="achievement-img">
-      <img src="achievement2.png" alt="Achievement 2" class="achievement-img">
     </div>
   </div>
 </div>
